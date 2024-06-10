@@ -138,18 +138,27 @@ data() {
             
         ],
         
-    },
-}
+    }
+},
 }
 </script>
 
 <template>
     <footer>
-        
+        <div class="links">
+
+        </div>
+        <div class="logo">
+            <img src="../assets/img/dc-logo-bg.png" alt="">
+        </div>
     </footer>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+footer{
+    background-color: black;
+    background-image: url(../assets/img/footer-bg.jpg);
+}
 </style>

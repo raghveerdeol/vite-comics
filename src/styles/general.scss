@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    text-transform: capitalize;
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+}
 ul{
     list-style: none;
 }

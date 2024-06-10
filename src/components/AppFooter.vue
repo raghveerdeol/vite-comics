@@ -39,7 +39,7 @@ data() {
                 url: "#",
             },
         ],
-        shopLInks: [
+        shopLinks: [
             {
                 id: 1,
                 title: "Shop DC",
@@ -146,8 +146,48 @@ data() {
 <template>
     <footer>
         <div class="links">
-
+            <div>
+                <h2>
+                    dc comics
+                </h2>
+                <ul class="dc-comics">
+                    <li v-for="(link, index) in dcComixLinks" :key="link.id">
+                        {{ link.title }}
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>
+                    shop
+                </h2>
+                <ul class="shop">
+                    <li v-for="(link, index) in shopLinks" :key="link.id">
+                        {{ link.title }}
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>
+                    dc
+                </h2>
+                <ul class="dc">
+                    <li v-for="(link, index) in dcLinks" :key="link.id">
+                        {{ link.title }}
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>
+                    sites
+                </h2>
+                <ul class="sites">
+                    <li v-for="(link, index) in sitesLinks" :key="link.id">
+                        {{ link.title }}
+                    </li>
+                </ul>
+            </div>
         </div>
+
         <div class="logo">
             <img src="../assets/img/dc-logo-bg.png" alt="">
         </div>
@@ -160,5 +200,34 @@ data() {
 footer{
     background-color: black;
     background-image: url(../assets/img/footer-bg.jpg);
+    background-size: cover;
+    color: white;
+    height: 375px;
+    @include flex-around();
+    @include padFooter();
+    overflow: hidden;
+        div{
+            width: 50%;
+        };
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 3rem 0;
+        div{
+            width: calc((100% / 3) - 4px);
+        };
+}
+h2{
+    padding: 12px 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+li{
+    line-height: 20px;
+    font-size: 14px;
+    color: grey;
 }
 </style>

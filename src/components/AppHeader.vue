@@ -102,8 +102,8 @@ methods: {
 
 div{
     @include flex-around();
-    padding: 1rem 4rem;
     @include padHeader();
+    background-color: white;
 }
 section.main-logo{
     width: 40%;
@@ -113,6 +113,10 @@ nav{
     ul{
     @include flex-between();
     }
+}
+a{
+    text-transform: uppercase;
+    font-size: 13px;
 }
 .active{
     color: $bg-logo;

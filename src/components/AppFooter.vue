@@ -1,4 +1,5 @@
 <script>
+import AppSignUp from './AppSignUp.vue';
 export default {
 data() {
     return {
@@ -137,67 +138,72 @@ data() {
             },
             
         ],
-        
     }
 },
+components: {
+    AppSignUp,
+}
 }
 </script>
 
 <template>
-    <footer>
-        <div class="links">
-            <div>
-                <h2>
-                    dc comics
-                </h2>
-                <ul class="dc-comics">
-                    <li v-for="(link, index) in dcComixLinks" :key="link.id">
-                        {{ link.title }}
-                    </li>
-                </ul>
+    <section>
+        <div class="footer-link">
+            <div class="links">
+                <div>
+                    <h2>
+                        dc comics
+                    </h2>
+                    <ul class="dc-comics">
+                        <li v-for="(link, index) in dcComixLinks" :key="link.id">
+                            {{ link.title }}
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>
+                        shop
+                    </h2>
+                    <ul class="shop">
+                        <li v-for="(link, index) in shopLinks" :key="link.id">
+                            {{ link.title }}
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>
+                        dc
+                    </h2>
+                    <ul class="dc">
+                        <li v-for="(link, index) in dcLinks" :key="link.id">
+                            {{ link.title }}
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>
+                        sites
+                    </h2>
+                    <ul class="sites">
+                        <li v-for="(link, index) in sitesLinks" :key="link.id">
+                            {{ link.title }}
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h2>
-                    shop
-                </h2>
-                <ul class="shop">
-                    <li v-for="(link, index) in shopLinks" :key="link.id">
-                        {{ link.title }}
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h2>
-                    dc
-                </h2>
-                <ul class="dc">
-                    <li v-for="(link, index) in dcLinks" :key="link.id">
-                        {{ link.title }}
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h2>
-                    sites
-                </h2>
-                <ul class="sites">
-                    <li v-for="(link, index) in sitesLinks" :key="link.id">
-                        {{ link.title }}
-                    </li>
-                </ul>
+    
+            <div class="logo">
+                <img src="../assets/img/dc-logo-bg.png" alt="">
             </div>
         </div>
-
-        <div class="logo">
-            <img src="../assets/img/dc-logo-bg.png" alt="">
-        </div>
-    </footer>
+        <AppSignUp/>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
-footer{
+.footer-link{
     background-color: black;
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;

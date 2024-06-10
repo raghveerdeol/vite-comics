@@ -103,8 +103,7 @@ methods: {
 div{
     @include flex-around();
     padding: 1rem 4rem;
-    width: 70%;
-    margin: 0 auto;
+    @include padHeader();
 }
 section.main-logo{
     width: 40%;
@@ -113,9 +112,6 @@ nav{
     width: 60%;
     ul{
     @include flex-between();
-        li{
-            margin-right: 10px;
-        }
     }
 }
 .active{

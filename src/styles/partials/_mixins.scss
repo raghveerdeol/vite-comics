@@ -8,3 +8,9 @@
     justify-content: space-between;
     align-items: center;
 }
+@mixin padHeader{    
+    padding: 15px 10rem;
+}
+@mixin padMain{
+    padding: 3rem 10rem;
+}

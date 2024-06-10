@@ -65,7 +65,16 @@ data() {
             },
         ]
     }
-}
+},
+methods: {
+    activeElement: function (element, index) {
+        if (element.id === (index + 1)) {
+            element.active = true;
+        }else{
+            element.active = false;
+        }
+    }
+},
 }
 </script>
 
@@ -77,7 +86,7 @@ data() {
     
         <nav class="nav-bar">
             <ul>
-                <li v-for="link in navLinks" :key="link.id">
+                <li v-for="(link, index) in navLinks" :key="link.id" @click="activeElement(link, index)">
                     <a href="link.url" :class="link.active === true ? 'active' : ''">
                         {{ link.title }}
                     </a>

@@ -103,8 +103,7 @@ section.main-logo{
 nav{
     width: 60%;
     ul{
-    display: flex;
-    justify-content: space-between;
+    @include flex-between();
         li{
             margin-right: 10px;
         }

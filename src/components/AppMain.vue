@@ -18,7 +18,7 @@ components: {
 <template>
     <AppJumbotron/>
     <div>
-        <h1>-->content goes here<--</h1>
+        <AppListCards/>
     </div>
     
     <AppShop/>

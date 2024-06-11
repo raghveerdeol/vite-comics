@@ -1,5 +1,7 @@
 <script>
 import AppShop from './AppShop.vue';
+import AppJumbotron from './AppJumbotron.vue';
+import AppListCards from './AppListCards.vue';
 
 export default {
 data() {
@@ -7,11 +9,14 @@ data() {
 },
 components: {
         AppShop,
+        AppJumbotron,
+        AppListCards,
     },
 }
 </script>
 
 <template>
+    <AppJumbotron/>
     <div>
         <h1>-->content goes here<--</h1>
     </div>
@@ -25,6 +30,5 @@ components: {
 div{
     background-color: $bg-main;
     color: white;
-    @include padMain();
 }
 </style>

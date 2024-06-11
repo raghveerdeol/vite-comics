@@ -15,14 +15,31 @@ props: {
 </script>
 
 <template>
-    <article>
+    <article class="card">
         <img :src="singleComic.thumb" :alt="singleComic.type">
-        <h2>
+        <h5>
             {{ singleComic.series }}
-        </h2>
+        </h5>
     </article>
 </template>
 
-<style scoped>
+<style  lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+.card{
+    width: calc((100% / 6) - 1.2rem);
+    padding-bottom: 2.5rem;
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: top;
+            padding-bottom: 1rem;
+        }
+        h5{
+            text-transform: uppercase;
+            font-weight: 100;
+        }
+}
 
 </style>

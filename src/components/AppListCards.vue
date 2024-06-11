@@ -91,6 +91,13 @@ components: {
     </div>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+.card-list{
+    @include padMain();
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 </style>

@@ -86,9 +86,14 @@ components: {
 </script>
 
 <template>
-    <div class="card-list">
-        <AppSingleCard v-for="(comic, index) in comicsList" :key="index" :single-comic="comic" />
-    </div>
+    <section>
+        <div class="card-list">
+            <AppSingleCard v-for="(comic, index) in comicsList" :key="index" :single-comic="comic" />
+        </div>
+        <div class="more-comics">
+            <button>load more</button>
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -99,5 +104,18 @@ components: {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.more-comics{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+        button{
+            background-color: $bg-logo;
+            color: white;
+            padding: .8rem 3.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: none;
+        }
 }
 </style>

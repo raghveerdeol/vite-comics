@@ -41,5 +41,8 @@ props: {
             font-weight: 100;
         }
 }
+.card:hover{
+    background-color: rgba($color: #d5caca, $alpha: 0.5);
+}
 
 </style>
